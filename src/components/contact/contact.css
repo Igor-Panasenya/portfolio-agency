@@ -1,0 +1,85 @@
+.boxes {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.together {
+    background-color: #fff;
+    color: black;
+    width: 50%;
+    text-align: right;
+
+    transition: ease 0.3s;
+}
+
+.together:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.contacts {
+    background-color: #70BD59;
+    color: white;
+    width: 50%;
+}
+
+.contacts:hover {
+    background-color: #66aa51;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px;
+}
+
+.box-content img {
+    width: 35px;
+    height: 35px;
+}
+
+.box-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 2.66667px;
+    text-align: center;
+
+    margin: 20px 0;
+}
+
+.box-text {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 16px;
+    letter-spacing: 1.55556px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 600px) {
+    h6 {
+        font-size: 30px;
+        width: 250px;
+        left: 100px;
+    }
+
+    .box-content {
+        padding: 20px;
+    }
+
+    .box-title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .box-text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

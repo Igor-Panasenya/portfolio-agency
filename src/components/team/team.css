@@ -1,0 +1,16 @@
+.team-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    gap: 5px;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 1000px) {
+    .team-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

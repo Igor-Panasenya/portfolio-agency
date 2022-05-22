@@ -1,0 +1,80 @@
+.work-item {
+    height: 620px;
+    margin-top: 20px;
+
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.work-item-content {
+    margin-left: 25%;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 21px;
+    letter-spacing: 1.152px;
+    color: #252525;
+}
+
+.work-item-info {
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.832px;
+
+    color: #C2C2C2;
+}
+
+h6 {
+    position: relative;
+    left: 35%;
+    top: -350px;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 3.072px;
+    margin: 0;
+
+    width: 300px;
+
+    z-index: 2;
+    color: #252525;
+}
+
+.link-work:hover .btn-reed-more {
+    opacity: 1;
+}
+
+.link-work h6 {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.link-work h6 span {
+    color: black;
+}
+
+.link-work:hover img {
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+
+    border-radius: 2rem;
+}
+
+.link-work:hover h6 {
+    text-decoration: line-through;
+    transition: all 0.5s ease;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 1000px) {
+    .link-work {
+        margin: 0 auto;
+    }
+}

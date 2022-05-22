@@ -1,0 +1,156 @@
+header {
+    max-height: 850px;
+}
+header .container {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider {
+    position: relative;
+    top: -100px;
+}
+
+.slide {
+    display: none;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-position: center center;
+    background-size: cover;
+    height: 850px;
+    min-width: 100%;
+
+    transition: all 0.5s ease;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.swiper-pagination-bullet-active {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    display: flex;
+    letter-spacing: 2.304px;
+    color: #FFFFFF;
+    background-image: url('/public/img/line-numbers.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.dots-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.dot {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 1.152px;
+    color: rgba(255, 255, 255, 0.437245);
+
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot:hover {
+    font-size: 36px;
+    line-height: 53px;
+}
+
+.dot.active {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    display: flex;
+    letter-spacing: 2.304px;
+    color: #FFFFFF;
+    background-image: url('/public/img/line-numbers.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 107px;
+    display: flex;
+    text-align: center;
+    letter-spacing: 4.608px;
+    color: #FFFFFF;
+
+    margin-top: 380px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+}
+
+.header-text {
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 1.28px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin: 0 auto;
+}
+
+/* - - - - - Screen Query - - - - - */
+@media screen and (max-width: 990px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+        margin-top: 330px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    h1 {
+        font-size: 32px;
+        margin-bottom: 0px;
+    }
+
+    .header-text {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .header-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    header, .slide {
+        max-height: 650px;
+    }
+}

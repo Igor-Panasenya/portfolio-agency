@@ -1,0 +1,43 @@
+.team-slider-item * {
+    display: flex;
+    justify-content: center;
+}
+
+.team-slider-item p {
+    font-size: 14px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: 0.896px;
+    color: #373737;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 auto;
+
+    max-width: 735px;
+}
+
+.team-slider-item-name {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 1.152px;
+    margin-top: 50px;
+
+    color: #373737;
+}
+
+.team-slider-item-name span {
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 4px;
+}
+
+.team-slider-item-line {
+    width: 80%;
+    height: 2px;
+    background-color: #D8D8D8;
+    margin: 20px auto;
+}
+
+.stars {
+    margin: 30px auto;
+}

@@ -1,0 +1,70 @@
+.team-item {
+    width: 370px;
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    transition: all ease 0.3s;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.team-item-content {
+    text-align: center;
+    background-color: rgba(212, 212, 212, 0.37);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    transition: all ease 0.3s;
+    position: relative;
+    bottom: -97px;
+}
+
+.team-item-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 1.152px;
+    color: #252525;
+    margin: 20px 0;
+}
+
+.team-line {
+    width: 45px;
+    height: 2px;
+    background: #252525;
+}
+
+.team-item-position {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 1.152px;
+    color: #252525;
+
+    margin-top: 10px;
+}
+
+.team-item-text {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1.008px;
+    color: #777777;
+
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+.team-item:hover .team-item-content{
+    bottom: 0;
+}
+
+.team-item:hover .team-item-content {
+    background-color: rgba(238, 238, 238, 0.904);
+}
