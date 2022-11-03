@@ -1,8 +1,7 @@
 .work-item {
+    display: inline-block;
     height: 620px;
     margin-top: 20px;
-
-    grid-template-rows: 1fr auto;
     margin-bottom: 10px;
     break-inside: avoid;
 }

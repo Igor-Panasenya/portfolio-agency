@@ -1,4 +1,14 @@
+.work-items {
+    column-count: 2;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    border: red solid 1px;
+}
+
 .works-header {
+    display: inline-block;
     max-height: 220px;
     width: 100%;
 }
@@ -13,8 +23,7 @@
 .works-nav-item {
     font-size: 13px;
     line-height: 15px;
-    display: flex;
-    align-items: flex-end;
+    display: inline-block;
     letter-spacing: 0.832px;
     color: #252525;
     mix-blend-mode: normal;
@@ -31,13 +40,7 @@
     opacity: 1;
 }
 
-.work-items {
-    column-count: 2;
-    column-gap: 10px;
-}
-
 .btnLoadMore {
-    box-sizing: border-box;
 
     cursor: pointer;
     padding: 10px 25px;
@@ -45,7 +48,6 @@
     border-radius: 0.3rem;
     color: #66aa51;
     border: #66aa51 solid 1px;
-    margin: 0 auto;
 
     transition: 0.3s ease;
 }
@@ -66,5 +68,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        column-count: 1;
     }
 }

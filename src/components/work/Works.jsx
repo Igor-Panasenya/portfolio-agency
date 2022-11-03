@@ -2,17 +2,18 @@ import React from 'react';
 import './works.css';
 import { useState } from "react";
 import WorkItem from "../workItem/WorkItem";
+import {useDispatch, useSelector} from "react-redux";
+import {setActiveWorkNavItem} from "../../redux/slices/filterSlice";
 
 const Works = () => {
 
+    const activeWorkNavItem = useSelector(state => state.filter.activeWorkNavItem);
+    const dispatch = useDispatch()
+
     const workNavItems = ['ALL', 'WEB DESIGN', 'BRANDING', 'PHOTOGRAPHY', 'ILLUSTRATION']
-    const [activeWorkNavItem, setActiveWorkNavItem] = useState(0)
-
-
 
     const sortedWorksItem = (index) => {
-
-        setActiveWorkNavItem(index)
+        dispatch(setActiveWorkNavItem(index))
         let worksItemsCategory = []
 
         if (index === 0) {
@@ -21,15 +22,12 @@ const Works = () => {
         } else {
             works.forEach(work => {
                 if (work.category.toLowerCase() === workNavItems[index].toLowerCase()) {
-                    console.log(work)
                     worksItemsCategory = [...worksItemsCategory, work]
                 }
             })
             setWorkItems(worksItemsCategory)
             setLoadMore(false)
         }
-
-
     }
     const works = [
         {
@@ -106,25 +104,25 @@ const Works = () => {
 
     return (
         <section id="work" className="container">
+
             <div className="work-items">
 
                 <div className="works-header">
                     <h3>Latest Works
-                            <div className="h3-line"></div>
-                        </h3>
+                        <div className="h3-line"></div>
+                    </h3>
 
                     <ul className="works-nav">
-                            {workNavItems.map((workNavItem, index) =>
-                                <li
-                                    className={activeWorkNavItem === index ? "works-nav-item active" : "works-nav-item"}
-                                    onClick={() => sortedWorksItem(index)}
-                                >
-                                    {workNavItem}
-                                </li>
-                            )}
-                        </ul>
+                        {workNavItems.map((workNavItem, index) =>
+                            <li
+                                className={activeWorkNavItem === index ? "works-nav-item active" : "works-nav-item"}
+                                onClick={() => sortedWorksItem(index)}
+                            >
+                                {workNavItem}
+                            </li>
+                        )}
+                    </ul>
                 </div>
-
 
                 {workItems.map((workItem) =>
                     <WorkItem workItem={workItem} key={workItem.id}/>
@@ -139,7 +137,6 @@ const Works = () => {
                         Load More
                     </button>
                 }
-
 
             </div>
         </section>
